@@ -1,0 +1,8 @@
+---
+- hosts: all
+#  sudo: yes
+  tasks:
+    - name: Installing OpenJDK
+      command: "{{ item }}"
+      with_items :
+       - sudo apt install default-jdk
